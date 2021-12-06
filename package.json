@@ -1,0 +1,105 @@
+{
+  "name": "ha-extension",
+  "version": "0.1.2",
+  "private": true,
+  "author": "airen29",
+  "url": "https://github.com/airen29",
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "detect-browser": "^5.2.0",
+    "dom-chef": "^4.2.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3",
+    "react-sortable-hoc": "^1.11.0",
+    "select-dom": "^6.0.2",
+    "semver-diff": "^3.1.1",
+    "webext-options-sync": "^2.0.0",
+    "webextension-polyfill": "^0.6.0"
+  },
+  "scripts": {
+    "dev": "webpack --mode=development --watch",
+    "build": "INLINE_RUNTIME_CHUNK=false cross-env NODE_ENV=production webpack --mode=production",
+    "test": "cross-env BABEL_ENV=testing ava",
+    "start": "react-scripts start"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": [
+        "https://www.hockeyarena.net/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "browser-env": "^3.2.5",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.2.0",
+    "cross-env": "^5.1.5",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "semver": "^7.3.2",
+    "uglifyjs-webpack-plugin": "^1.2.2",
+    "web-ext": "^4.3.0",
+    "web-ext-submit": "^4.2.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.1.1"
+  },
+  "ava": {
+    "require": [
+      "babel-register",
+      "babel-polyfill"
+    ],
+    "babel": {
+      "plugins": [
+        [
+          "transform-react-jsx",
+          {
+            "pragma": "h"
+          }
+        ]
+      ]
+    }
+  },
+  "babel": {
+    "env": {
+      "testing": {
+        "presets": [
+          "env"
+        ],
+        "plugins": [
+          "transform-object-rest-spread"
+        ]
+      }
+    }
+  }
+}
