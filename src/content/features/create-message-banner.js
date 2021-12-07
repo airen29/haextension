@@ -4,7 +4,7 @@ import messageBanner from '../components/message-banner/message-banner';
 const messageMenuHeaderSelector = `#sddm > li:nth-child(9) > a:nth-child(1) > img:nth-child(2)`;
 
 const checkMail = text => {
-  const regex = new RegExp('red');
+  const regex = new RegExp('24');
   return regex.test(text);
 };
 
