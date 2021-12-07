@@ -21,7 +21,7 @@ export default ({ getSwitchProps }) => (
     <ListItemSwitch
       primary="Improve new message notification"
       secondary="Creates banner notification on new message."
-      {...getSwitchProps('createMessageNotification')}
+      {...getSwitchProps('createMessageBanner')}
     />
     <ListSubheader divider>Discussion</ListSubheader>
     <ListItemSwitch
