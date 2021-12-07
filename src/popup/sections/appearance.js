@@ -17,11 +17,11 @@ export default ({ getSwitchProps }) => (
       secondary="Allows left navigation to be movable."
       {...getSwitchProps('movableNavigation')}
     />
-    <ListSubheader divider>Team Profile</ListSubheader>
+    <ListSubheader divider>Accessories</ListSubheader>
     <ListItemSwitch
-      primary="Show Jerseys"
-      secondary="Creates one click button to show current jerseys in the team."
-      {...getSwitchProps('showTeamJersey')}
+      primary="Improve new message notification"
+      secondary="Creates banner notification on new message."
+      {...getSwitchProps('createMessageBanner')}
     />
     <ListSubheader divider>Discussion</ListSubheader>
     <ListItemSwitch

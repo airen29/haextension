@@ -5,7 +5,7 @@ import hideSponsorMenu from './features/hide-sponsor-menu-item'
 import hideDiscussionTopics from './features/hide-discussion-topics';
 import moveHiddenTopics from './features/move-hidden-topics';
 import movableNavigation from './features/movable-navigation';
-import showTeamJersey from './features/show-team-jersey';
+import createMessageBanner from './features/create-message-banner';
 
 function observeBody() {
   const observer = new MutationObserver(() => {
@@ -32,8 +32,8 @@ function runOnce() {
   }
 
   runFeatureIf(
-    'showTeamJersey',
-    showTeamJersey
+    'createMessageBanner',
+    createMessageBanner
   );
 
   runFeatureIf(
