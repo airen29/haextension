@@ -31,10 +31,12 @@ function runOnce() {
     );
   }
 
-  runFeatureIf(
-    'createMessageBanner',
-    createMessageBanner
-  );
+  if (!pages.isMessages()) {
+    runFeatureIf(
+      'createMessageBanner',
+      createMessageBanner
+    );
+  }
 
   runFeatureIf(
     'movableNavigation',
