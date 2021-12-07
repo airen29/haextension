@@ -1,7 +1,7 @@
 {
   "name": "Hockeyarena Extension",
   "description": "Expand the Hockeyarena experience and adds useful features.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "manifest_version": 2,
   "homepage_url": "https://github.com/airen29",
   "minimum_chrome_version": "51",
