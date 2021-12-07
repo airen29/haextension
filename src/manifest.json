@@ -12,9 +12,7 @@
     }
   },
   "permissions": [
-    "storage",
-    "notifications",
-    "clipboardWrite"
+    "storage"
   ],
   "icons": {
     "16": "16x16.png",
