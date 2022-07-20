@@ -6,11 +6,12 @@ const deleteIcon = 'https://www.hockeyarena.net/pics/del.gif'
 
 export default (discussionId) => {
   const handleClick = async event => {
-    event.preventDefault();
+    // event.preventDefault();
     const { hiddenDiscussions } = await storage.getAll();
     const unique = new Set(hiddenDiscussions);
     unique.add(discussionId);
     await storage.set({ hiddenDiscussions: [...unique] })
+    window.location.reload(false);
   };
 
   return (

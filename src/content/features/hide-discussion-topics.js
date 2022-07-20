@@ -1,6 +1,7 @@
 import select from 'select-dom';
 import storage from '../../shared/storage';
 import addHideFunctionality from '../components/hide-discussion/add-hide-functionality';
+import addUnhideFunctionality from '../components/hide-discussion/add-unhide-functionality';
 
 let hiddenDiscussions;
 const tableSelector = `table.stats:nth-child(5) > tbody:nth-child(2)`;
@@ -16,10 +17,17 @@ const isTopicHidden = (discussionId) => {
   return hiddenDiscussions.includes(discussionId);
 };
 
-const addFunctionality = async (nameEl, element) => {
+const addFunctionalityToHide = async (nameEl, element) => {
   const discussionId = getDiscussionId(nameEl.lastChild.href);
   const addIconWithFunctionality = addHideFunctionality(discussionId)
   
+  element.appendChild(addIconWithFunctionality)
+};
+
+const addFunctionalityToUnhide = async (nameEl, element) => {
+  const discussionId = getDiscussionId(nameEl.lastChild.href);
+  const addIconWithFunctionality = addUnhideFunctionality(discussionId)
+
   element.appendChild(addIconWithFunctionality)
 };
 
@@ -34,6 +42,7 @@ export default async () => {
     const discussionId = getDiscussionId(nameTd.lastChild.href);
     const topicIsHidden = isTopicHidden(discussionId);
 
-    if (!topicIsHidden) addFunctionality(nameTd, iconsTd);
+    if (!topicIsHidden) addFunctionalityToHide(nameTd, iconsTd);
+    // else addFunctionalityToUnhide(nameTd, iconsTd);
   })
 }

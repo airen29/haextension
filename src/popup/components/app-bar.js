@@ -36,6 +36,7 @@ export default class extends React.Component {
                 variant="raised"
                 disabled={!updateNotifications.length}
                 onClick={this.onClickNotificationUpdates}
+                color="#fff"
               >
                 {updateNotifications.length} new Update
                 {updateNotifications.length !== 1 && 's'}

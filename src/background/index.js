@@ -1,7 +1,7 @@
 import browser from 'webextension-polyfill'
 import semverDiff from 'semver-diff'
 import storage from '../shared/storage'
-import changelogs from '../changelogs'
+import changelogs from '../changelogs.json'
 import { UPDATE_NOTIFICATION_TYPES } from '../shared/settings'
 import { ACTION_NOTIFICATION } from '../shared/constants'
 
