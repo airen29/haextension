@@ -1,7 +1,7 @@
 {
   "name": "Hockeyarena Extension",
   "description": "Expand the Hockeyarena experience and adds useful features.",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "manifest_version": 2,
   "homepage_url": "https://github.com/airen29",
   "minimum_chrome_version": "51",
@@ -13,8 +13,7 @@
   },
   "permissions": [
     "storage",
-    "notifications",
-    "clipboardWrite"
+    "notifications"
   ],
   "icons": {
     "16": "16x16.png",
@@ -24,12 +23,8 @@
   "content_scripts": [
     {
       "run_at": "document_end",
-      "matches": [
-        "https://www.hockeyarena.net/*"
-      ],
-      "js": [
-        "content.js"
-      ]
+      "matches": ["https://www.hockeyarena.net/*"],
+      "js": ["content.js"]
     }
   ],
   "browser_action": {
@@ -37,9 +32,7 @@
     "default_popup": "popup.html"
   },
   "background": {
-    "scripts": [
-      "background.js"
-    ],
+    "scripts": ["background.js"],
     "persistent": false
   }
 }

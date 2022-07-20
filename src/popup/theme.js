@@ -17,6 +17,9 @@ export default createTheme({
     secondary: {
       main: colors.darkBlue
     },
+    notifications: {
+      main: colors.snow
+    },
     text: {
       secondary: colors.dark
     },

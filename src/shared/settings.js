@@ -5,7 +5,7 @@ export const DEFAULTS = {
   matchAutoAcceptInvite: false,
   notifyDisabled: false,
   updateNotificationType: 'tab',
-  updateNotifications: [],
+  updateNotifications: ["0.1.4"],
   hideSponsorMenu: false,
   movableNavigation: false,
   showTeamJersey: false,
@@ -13,4 +13,7 @@ export const DEFAULTS = {
   hideDiscussionTopics: true,
   hiddenDiscussions: [],
   moveHiddenTopics: true,
+  createMessageBanner: true,
+  createAuthorBanner: true,
+  createHAEDiscussionIcon: true,
 }

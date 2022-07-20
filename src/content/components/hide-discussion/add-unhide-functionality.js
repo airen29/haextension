@@ -2,20 +2,25 @@
 import { h } from 'dom-chef'
 import storage from '../../../shared/storage'
 
-const deleteIcon = 'https://www.hockeyarena.net/pics/del.gif'
+const unhideIcon = 'https://www.hockeyarena.net//pics/trup.png'
 
 export default (discussionId) => {
   const handleClick = async event => {
-    event.preventDefault();
-    const { hiddenDiscussions } = await storage.getAll();
-    const unique = new Set(hiddenDiscussions);
-    unique.delete(discussionId);
-    await storage.set({ hiddenDiscussions: [...unique] })
+    console.log("test")
+    // event.preventDefault();
+    // const { hiddenDiscussions } = await storage.getAll();
+    // console.log(hiddenDiscussions + "muhehe")
+    // const unique = new Set(hiddenDiscussions);
+    // unique.delete(discussionId);
+
+    // console.log(unique);
+    // await storage.set({ hiddenDiscussions: [...unique] })
+    window.location.reload(false);
   };
 
   return (
     <img 
-      src={deleteIcon}
+      src={unhideIcon}
       alt="Odkryť tému"
       title="Odkryť tému"
       style={{ verticalAlign: 'middle' }}

@@ -1,7 +1,7 @@
 import React from 'react'
 import browser from 'webextension-polyfill'
 import storage from '../shared/storage'
-import changelogs from '../changelogs'
+import changelogs from '../changelogs.json'
 import AppBar from './components/app-bar'
 import Drawer from './components/drawer'
 import General, { GENERAL } from './sections/general'
