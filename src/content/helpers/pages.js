@@ -16,3 +16,5 @@ export const isExtensionCreatorTeam = path =>
 export const isDiscussionPosts = path =>
 /(p=manager_discussion_posts.php)/.test(path || getFullPath())
 
+export const isLinesPage = path =>
+/(p=manager_lines_lineup_form_new.php)/.test(path || getFullPath())
