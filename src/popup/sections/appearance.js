@@ -23,6 +23,11 @@ export default ({ getSwitchProps }) => (
       secondary="Creates banner notification on new message."
       {...getSwitchProps('createMessageBanner')}
     />
+    <ListItemSwitch
+      primary="Add Stop the player functionality (Red Hand)"
+      secondary="Adds improved Stop the player for one match ability into Lines (known as Red Hand). WARNING: Removes original functionality"
+      {...getSwitchProps('stopThePlayer')}
+    />
     <ListSubheader divider>Discussion</ListSubheader>
     <ListItemSwitch
       primary="Hide discussions"

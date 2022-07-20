@@ -16,5 +16,5 @@ export const DEFAULTS = {
   createMessageBanner: true,
   createAuthorBanner: true,
   createHAEDiscussionIcon: true,
-  stopThePlayer: true,
+  stopThePlayer: false,
 }
