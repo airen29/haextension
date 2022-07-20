@@ -8,6 +8,7 @@ import movableNavigation from './features/movable-navigation';
 import createMessageBanner from './features/create-message-banner';
 import createAuthorBanner from './features/create-author-banner';
 import createHAEDiscussionIcon from './features/create-discussion-hae-icon';
+import stopThePlayer from './features/stop-the-player';
 
 function observeBody() {
   const observer = new MutationObserver(() => {
@@ -51,6 +52,13 @@ function runOnce() {
     runFeatureIf(
       'createHAEDiscussionIcon',
       createHAEDiscussionIcon
+    );
+  }
+
+  if (pages.isLinesPage()) {
+    runFeatureIf(
+      'stopThePlayer',
+      stopThePlayer
     );
   }
 

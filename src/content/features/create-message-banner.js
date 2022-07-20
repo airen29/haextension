@@ -22,7 +22,6 @@ const createMessageBanner = () => {
 export default async () => {
   const messageMenuHeader = select(messageMenuHeaderSelector);
 
-  console.log(checkMail(messageMenuHeader.currentSrc));
   const gotNewMail = checkMail(messageMenuHeader.currentSrc);
 
   if (gotNewMail) createMessageBanner();
