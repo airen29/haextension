@@ -18,3 +18,9 @@ export const isDiscussionPosts = path =>
 
 export const isLinesPage = path =>
 /(p=manager_lines_lineup_form_new.php)/.test(path || getFullPath())
+
+export const isYouthSchool = path =>
+/(p=manager_youth_school_form.php)/.test(path || getFullPath())
+
+export const isDiscussionTopic = path =>
+/(p=manager_discussion_posts.php)/.test(path || getFullPath())

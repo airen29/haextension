@@ -24,9 +24,14 @@ export default ({ getSwitchProps }) => (
       {...getSwitchProps('createMessageBanner')}
     />
     <ListItemSwitch
-      primary="Add Stop the player functionality (Red Hand)"
-      secondary="Adds improved Stop the player for one match ability into Lines (known as Red Hand). WARNING: Removes original functionality"
+      primary="Improve Stop the player functionality (Red Hand)"
+      secondary="Improves Stop the player for one match ability into Lines (known as Red Hand)"
       {...getSwitchProps('stopThePlayer')}
+    />
+    <ListItemSwitch
+      primary="Show potential information"
+      secondary="Shows player MAX/MIN potential in Youth School (and Draft)"
+      {...getSwitchProps('youthSchoolPot')}
     />
     <ListSubheader divider>Discussion</ListSubheader>
     <ListItemSwitch
@@ -34,6 +39,11 @@ export default ({ getSwitchProps }) => (
       secondary="Ability to hide specific discussions."
       {...getSwitchProps('hideDiscussionTopics')}
     />
+    {/* <ListItemSwitch
+      primary="Prettify player details in discussions"
+      secondary="Prettify player details in discussions."
+      {...getSwitchProps('prettifyPlayerDetailsInDiscussions')}
+    /> */}
     {/* <ListItemSwitch
       primary="Move discussions"
       secondary="Hidden discussions will be moved to the separate table."
