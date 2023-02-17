@@ -17,4 +17,6 @@ export const DEFAULTS = {
   createAuthorBanner: true,
   createHAEDiscussionIcon: true,
   stopThePlayer: false,
+  youthSchoolPot: true,
+  // prettifyPlayerDetailsInDiscussions: false,
 }
