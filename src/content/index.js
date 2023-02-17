@@ -1,7 +1,7 @@
-import storage from '../shared/storage'
-import * as pages from './helpers/pages'
-import { runFeatureIf } from './helpers/user-settings'
-import hideSponsorMenu from './features/hide-sponsor-menu-item'
+import storage from '../shared/storage';
+import * as pages from './helpers/pages';
+import { runFeatureIf } from './helpers/user-settings';
+import hideSponsorMenu from './features/hide-sponsor-menu-item';
 import hideDiscussionTopics from './features/hide-discussion-topics';
 import moveHiddenTopics from './features/move-hidden-topics';
 import movableNavigation from './features/movable-navigation';
@@ -9,6 +9,8 @@ import createMessageBanner from './features/create-message-banner';
 import createAuthorBanner from './features/create-author-banner';
 import createHAEDiscussionIcon from './features/create-discussion-hae-icon';
 import stopThePlayer from './features/stop-the-player';
+import youthSchoolPot from './features/show-potential-youth';
+// import prettifyPlayerDetailsInDiscussions from './features/prettify-player-details-in-discussions';
 
 function observeBody() {
   const observer = new MutationObserver(() => {
@@ -62,6 +64,19 @@ function runOnce() {
     );
   }
 
+  if (pages.isYouthSchool()) {
+    runFeatureIf(
+      'youthSchoolPot',
+      youthSchoolPot
+    );
+  }
+
+  // if (pages.isDiscussionTopic()) {
+  //   runFeatureIf(
+  //     'prettifyPlayerDetailsInDiscussions',
+  //     prettifyPlayerDetailsInDiscussions
+  //   );
+  // }
   runFeatureIf(
     'movableNavigation',
     movableNavigation
